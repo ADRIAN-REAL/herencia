@@ -1,67 +1,107 @@
+import java.util.Date;
+
 public class Visita {
-    protected String nombre;
-    protected String primerApellido;
-    protected String segundoApellido;
-    protected String carnetIdentidad;
-    protected int celular;
+    private String codVisita;
+    private Date fechaHora;
+    private Hospital hospital;
+    private Servicio servicio;
+    private Medico medico;
+    private String diagnostico;
+    private String tratamientos;
+    private int numeroCama;
+    private Date fechaSalida;
+    private Historial historial;
 
-    public Visita(String nombre, String primerApellido, String segundoApellido) {
-        this.setNombre(nombre);
-        this.setPrimerApellido(primerApellido);
-        this.setSegundoApellido(segundoApellido);
-        this.setCarnetIdentidad(carnetIdentidad);
-        this.setCelular(celular);
+    public Visita(String codVisita, Date fechaHora, Hospital hospital, Servicio servicio, Medico medico, String diagnostico, String tratamientos, int numeroCama, Date fechaSalida, Historial historial) {
+        this.setCodVisita(codVisita);
+        this.setFechaHora(fechaHora);
+        this.setHospital(hospital);
+        this.setServicio(servicio);
+        this.setMedico(medico);
+        this.setDiagnostico(diagnostico);
+        this.setTratamientos(tratamientos);
+        this.setNumeroCama(numeroCama);
+        this.setFechaSalida(fechaSalida);
+        this.setHistorial(historial);
     }
 
-
-    public String getNombre() {
-        return nombre;
+    public String getCodVisita() {
+        return codVisita;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setCodVisita(String codVisita) {
+        this.codVisita = codVisita;
     }
 
-    public String getPrimerApellido() {
-        return primerApellido;
+    public Date getFechaHora() {
+        return fechaHora;
     }
 
-    public void setPrimerApellido(String primerApellido) {
-        this.primerApellido = primerApellido;
+    public void setFechaHora(Date fechaHora) {
+        this.fechaHora = fechaHora;
     }
 
-    public String getSegundoApellido() {
-        return segundoApellido;
+    public Hospital getHospital() {
+        return hospital;
     }
 
-    public void setSegundoApellido(String segundoApellido) {
-        this.segundoApellido = segundoApellido;
+    public void setHospital(Hospital hospital) {
+        this.hospital = hospital;
     }
 
-    public String getCarnetIdentidad() {
-        return carnetIdentidad;
+    public Servicio getServicio() {
+        return servicio;
     }
 
-    public void setCarnetIdentidad(String carnetIdentidad) {
-        this.carnetIdentidad = carnetIdentidad;
+    public void setServicio(Servicio servicio) {
+        this.servicio = servicio;
     }
 
-    public int getCelular() {
-        return celular;
+    public Medico getMedico() {
+        return medico;
     }
 
-    public void setCelular(int celular) {
-        this.celular = celular;
+    public void setMedico(Medico medico) {
+        this.medico = medico;
     }
 
-    @Override
-    public String toString() {
-        String nombreCompleto = primerApellido;
-        if (segundoApellido !=null){
-            nombreCompleto += " " + segundoApellido;
+    public String getDiagnostico() {
+        return diagnostico;
+    }
 
-        }
-        nombreCompleto += " " + nombre;
-        return nombreCompleto;
+    public void setDiagnostico(String diagnostico) {
+        this.diagnostico = diagnostico;
+    }
+
+    public String getTratamientos() {
+        return tratamientos;
+    }
+
+    public void setTratamientos(String tratamientos) {
+        this.tratamientos = tratamientos;
+    }
+
+    public int getNumeroCama() {
+        return numeroCama;
+    }
+
+    public void setNumeroCama(int numeroCama) {
+        this.numeroCama = numeroCama;
+    }
+
+    public Date getFechaSalida() {
+        return fechaSalida;
+    }
+
+    public void setFechaSalida(Date fechaSalida) {
+        this.fechaSalida = fechaSalida;
+    }
+
+    public Historial getHistorial() {
+        return historial;
+    }
+
+    public void setHistorial(Historial historial) {
+        this.historial = historial;
     }
 }
